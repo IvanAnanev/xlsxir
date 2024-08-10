@@ -21,11 +21,11 @@ defmodule Xlsxir.Unzip do
 
          iex> path = "./test/test_data/test.xlsx"
          iex> Xlsxir.Unzip.validate_path_and_index(path, 0)
-         {:ok, './test/test_data/test.xlsx'}
+         {:ok, ~c"./test/test_data/test.xlsx"}
 
          iex> path = "./test/test_data/test.validfilebutnotxlsx"
          iex> Xlsxir.Unzip.validate_path_and_index(path, 0)
-         {:ok, './test/test_data/test.validfilebutnotxlsx'}
+         {:ok, ~c"./test/test_data/test.validfilebutnotxlsx"}
 
          iex> path = "./test/test_data/test.xlsx"
          iex> Xlsxir.Unzip.validate_path_and_index(path, 100)
@@ -101,7 +101,7 @@ defmodule Xlsxir.Unzip do
   end
 
   defp search_file_list(file_list, index) do
-    sheet   = 'xl/worksheets/sheet#{index + 1}.xml'
+    sheet   = ~c"xl/worksheets/sheet#{index + 1}.xml"
     results = file_list
               |> Enum.map(fn file ->
                    case file do
@@ -128,10 +128,10 @@ defmodule Xlsxir.Unzip do
   - `to` - `:memory` or `{:file, "destination/path"}` option
 
   ## Example
-  An example file named `test.zip` located in './test_data/test' containing a single file named `test.txt`:
+  An example file named `test.zip` located in ~c"./test_data/test" containing a single file named `test.txt`:
 
       iex> path = "./test/test_data/test.zip"
-      iex> file_list = ['test.txt']
+      iex> file_list = [~c"test.txt"]
       iex> Xlsxir.Unzip.extract_xml(file_list, path, :memory)
       {:ok, [%Xlsxir.XmlFile{content: "test_successful", name: "test.txt", path: nil}]}
       iex> Xlsxir.Unzip.extract_xml(file_list, path, {:file, "temp/"})

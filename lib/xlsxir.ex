@@ -249,11 +249,11 @@ defmodule Xlsxir do
 
   ## Example
   An example file named `test.xlsx` located in `./test/test_data` containing the following:
-  - cell 'A1' -> "string one"
-  - cell 'B1' -> "string two"
-  - cell 'C1' -> integer of 10
-  - cell 'D1' -> formula of "4 * 5"
-  - cell 'E1' -> date of 1/1/2016 or Excel date serial of 42370
+  - cell ~c"A1" -> "string one"
+  - cell ~c"B1" -> "string two"
+  - cell ~c"C1" -> integer of 10
+  - cell ~c"D1" -> formula of "4 * 5"
+  - cell ~c"E1" -> date of 1/1/2016 or Excel date serial of 42370
 
           iex> {:ok, tid} = Xlsxir.extract("./test/test_data/test.xlsx", 0)
           iex> Xlsxir.get_list(tid)
@@ -287,11 +287,11 @@ defmodule Xlsxir do
 
   ## Example
   An example file named `test.xlsx` located in `./test/test_data` containing the following:
-  - cell 'A1' -> "string one"
-  - cell 'B1' -> "string two"
-  - cell 'C1' -> integer of 10
-  - cell 'D1' -> formula of "4 * 5"
-  - cell 'E1' -> date of 1/1/2016 or Excel date serial of 42370
+  - cell ~c"A1" -> "string one"
+  - cell ~c"B1" -> "string two"
+  - cell ~c"C1" -> integer of 10
+  - cell ~c"D1" -> formula of "4 * 5"
+  - cell ~c"E1" -> date of 1/1/2016 or Excel date serial of 42370
 
           iex> {:ok, tid} = Xlsxir.extract("./test/test_data/test.xlsx", 0)
           iex> Xlsxir.get_map(tid)
@@ -322,11 +322,11 @@ defmodule Xlsxir do
 
   ## Example
   An example file named `test.xlsx` located in `./test/test_data` containing the following:
-  - cell 'A1' -> "string one"
-  - cell 'B1' -> "string two"
-  - cell 'C1' -> integer of 10
-  - cell 'D1' -> formula of "4 * 5"
-  - cell 'E1' -> date of 1/1/2016 or Excel date serial of 42370
+  - cell ~c"A1" -> "string one"
+  - cell ~c"B1" -> "string two"
+  - cell ~c"C1" -> integer of 10
+  - cell ~c"D1" -> formula of "4 * 5"
+  - cell ~c"E1" -> date of 1/1/2016 or Excel date serial of 42370
 
           iex> {:ok, tid} = Xlsxir.extract("./test/test_data/test.xlsx", 0)
           iex> mda = Xlsxir.get_mda(tid)
@@ -381,11 +381,11 @@ defmodule Xlsxir do
 
   ## Example
   An example file named `test.xlsx` located in `./test/test_data` containing the following:
-  - cell 'A1' -> "string one"
-  - cell 'B1' -> "string two"
-  - cell 'C1' -> integer of 10
-  - cell 'D1' -> formula of "4 * 5"
-  - cell 'E1' -> date of 1/1/2016 or Excel date serial of 42370
+  - cell ~c"A1" -> "string one"
+  - cell ~c"B1" -> "string two"
+  - cell ~c"C1" -> integer of 10
+  - cell ~c"D1" -> formula of "4 * 5"
+  - cell ~c"E1" -> date of 1/1/2016 or Excel date serial of 42370
 
           iex> {:ok, tid} = Xlsxir.extract("./test/test_data/test.xlsx", 0)
           iex> Xlsxir.get_cell(tid, "A1")
@@ -422,11 +422,11 @@ defmodule Xlsxir do
 
   ## Example
   An example file named `test.xlsx` located in `./test/test_data` containing the following:
-  - cell 'A1' -> "string one"
-  - cell 'B1' -> "string two"
-  - cell 'C1' -> integer of 10
-  - cell 'D1' -> formula of "4 * 5"
-  - cell 'E1' -> date of 1/1/2016 or Excel date serial of 42370
+  - cell ~c"A1" -> "string one"
+  - cell ~c"B1" -> "string two"
+  - cell ~c"C1" -> integer of 10
+  - cell ~c"D1" -> formula of "4 * 5"
+  - cell ~c"E1" -> date of 1/1/2016 or Excel date serial of 42370
 
           iex> {:ok, tid} = Xlsxir.extract("./test/test_data/test.xlsx", 0)
           iex> Xlsxir.get_row(tid, 1)
@@ -456,11 +456,11 @@ defmodule Xlsxir do
 
   ## Example
   An example file named `test.xlsx` located in `./test/test_data` containing the following:
-  - cell 'A1' -> "string one"
-  - cell 'B1' -> "string two"
-  - cell 'C1' -> integer of 10
-  - cell 'D1' -> formula of "4 * 5"
-  - cell 'E1' -> date of 1/1/2016 or Excel date serial of 42370
+  - cell ~c"A1" -> "string one"
+  - cell ~c"B1" -> "string two"
+  - cell ~c"C1" -> integer of 10
+  - cell ~c"D1" -> formula of "4 * 5"
+  - cell ~c"E1" -> date of 1/1/2016 or Excel date serial of 42370
 
           iex> {:ok, tid} = Xlsxir.extract("./test/test_data/test.xlsx", 0)
           iex> Xlsxir.get_col(tid, "A")

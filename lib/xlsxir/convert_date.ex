@@ -10,11 +10,11 @@ defmodule Xlsxir.ConvertDate do
 
   ## Parameters
 
-  - `serial` - ISO 8601 date format serial in `char_list` format (i.e. 4/30/75 as '27514')
+  - `serial` - ISO 8601 date format serial in `char_list` format (i.e. 4/30/75 as ~c"27514")
 
   ## Example
 
-      iex> Xlsxir.ConvertDate.from_serial('27514')
+      iex> Xlsxir.ConvertDate.from_serial(~c"27514")
       {1975, 4, 30}
   """
   def from_serial(serial) do
